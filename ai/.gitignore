@@ -1,0 +1,6 @@
+.idea
+secrets.json
+glowtts
+hifigan
+__pycache__
+.pyc
