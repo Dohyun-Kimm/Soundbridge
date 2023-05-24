@@ -179,5 +179,5 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 
 
-  ### 사용한 TTS Open Source
-  https://github.com/coqui-ai/TTS 위 오픈소스를 프로젝트에 맞게 수정한 후 TTS를 적용했습니다.
+## 사용한 TTS Open Source
+- https://github.com/coqui-ai/TTS 위 오픈소스를 프로젝트에 맞게 수정한 후 TTS를 적용했습니다.
