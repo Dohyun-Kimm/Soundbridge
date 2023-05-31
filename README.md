@@ -1,4 +1,125 @@
-# 1. TTS 모델 선택
+# Almost There
+
+- 공유를 통해 모임을 쉽게 관리하고, 일상에서 재미있게 즐길 수 있는 서비스
+- 기간 2023.04.10 ~ 05.19 (6주)
+- 삼성청년SW아카데미 SSAFY 8기 2학기 자율 **오픈소스** 프로젝트
+- TEAM 어디야? : 엄희정(팀장), 서지윤, 지강훈, 신도연, 안승태, 이종민
+- [Almost There 시연 UCC](https://youtu.be/dL11J09aq0I)
+
+## 목차
+
+1. [기획 배경](#기획-배경)
+2. [SoundBridge 소개](#SoundBridge-소개)
+3. [주요 기능](#주요-기능)
+4. [주요 스택](#주요-스택)
+5. [팀원 역할](#팀원-역할)
+6. [프로젝트 구조](#프로젝트-구조)
+
+## 기획 배경
+
+**음성 AI 모델이 가장 필요한 사람들인 청각장애인의 문제점을 파악**
+
+1) 소통을 원활하게 할 수 있도록 자주 사용 하는 말을 빠르게 입력할 수 있는 보조 수단이 없음
+
+2) 말을 이용해 대화하는 사람이 대다수지만 발음을 연습할 수 있는 수단도 부족하고, 프로그램은 비쌈
+
+3) 말하고 듣는 것이 불편하기 때문에 사회에서 고립되는 경우가 많음
+
+4) 비장애인들은 청각장애인들에 대한 편견이 존재하여 다가가기 어렵다고 생각하거나 수화를 모르면 대화를 할 수 없다는 편견이 있음
+
+## SoundBridge 소개
+
+청인과 농인 사이의 소통을 편리하게 하는 보조 수단이 필요 → 소통 STT와 TTS
+
+보조 수단 없이 소통하고자 할 때 말을 할 수 있도록 발음 교정 지원이 필요 → 발음 연습
+
+화상 미팅을 통한 발음 피드백
+
+## 주요 기능
+
+### 로그인
+
+- **Kakao** 소셜 로그인 제공
+- Spring Security, JWT token, OAuth를 통한 인증, 인가 적용
+
+### 청각 장애인
+
+- **메인 페이지** 
+  - 자주 사용하는 문장 조회
+  - 빠른 TTS, 채팅을 통한 STT 기능 제공
+- **발음 연습 페이지**
+  - 기본 발음, 일상 단어, 문장 연습 제공
+  - 발음이 다른 부분은 빨간색으로 표시
+  - 유튜브를 통해 기본 발음 연습을 도와줌
+- **비대면 피드백 상담 **
+  - 발음 피드백 요청을 통해 피드백 상담 기능
+- **마이 페이지**
+  - 자주 사용하는 문장 조회 및 수정
+  - 발음 피드백 기록 조회
+- **TTS에 사용될 목소리 선택 페이지**
+  - 내가 선택한 목소리 및 선택되지 않은 목소리 조회
+  - 나이, 특징 등 다양한 필터 기능 제공
+  - 봉사자가 녹음한 목소리 or Clova 목소리 선택
+
+### 봉사자
+
+- **발음 피드백 수락 페이지**
+  - 요청받은 발음 피드백 조회 및 수락
+- **목소리 녹음 페이지**
+  - TTS에 사용될 목소리 녹음 
+  - 중간 저장
+  - 녹음한 문장 다시듣기
+- **마이페이지**
+  - 발음 피드백 기록 조회
+  - 녹음 진행사항 조회
+
+## 주요 스택
+
+### Backend
+
+- <img src="https://img.shields.io/badge/Spring Boot 2.7.9-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flat-square&logo=&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=SpringSecurity&logoColor=white"/> <img src="https://img.shields.io/badge/OAuth-000000?style=flat-square&logo=&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=&logoColor=white"/>
+- <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+- <img src="https://img.shields.io/badge/WebSocket-FF6C37?style=flat-square&logo=WebSocket" />
+- <img src="https://img.shields.io/badge/Intellij IDEA-0052CC?style=flat-square&logo=Intellij IDEA&logoColor=white"/> <img src="https://img.shields.io/badge/PyCharm-000000?style=flat-square&logo=pycharm&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=Postman&logoColor=white"/>
+
+### Frontend
+
+- <img src="https://img.shields.io/badge/Vue3-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/> <img src="https://img.shields.io/badge/Pinia-4FC08D?style=flat-square&logo=&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Visual Studio Code-1867C0?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
+
+### Database
+
+- <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white"/>
+
+### DevOps
+
+- <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=flat-square&logo=Amazon EC2&logoColor=white"/> <img src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"/> <img src="https://img.shields.io/badge/SSL-0054FF?style=flat-square&logo=&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=Jenkins&logoColor=white"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white"/>
+
+### Tools
+
+- <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=GitLab&logoColor=white"/> <img src="https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=Jira Software&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=Discord&logoColor=white"/> <img src="https://img.shields.io/badge/Mattermost-0058CC?style=flat-square&logo=Mattermost&logoColor=white"/>
+- <img src="https://img.shields.io/badge/ERDCloud-000000?style=flat-square&logo=ERDCloud&logoColor=white"/>
+
+## 팀원 역할
+
+![TEAM](/docs/image/team.png)
+
+## 프로젝트 구조
+
+### ERD
+
+![ERD](/docs/image/erd.png)
+
+### Architecture
+
+![Architecture](/docs/image/architecture.jpg)
+
+
+## TTS 모델 선택
 
 ## 선택한 모델
 
@@ -93,9 +214,9 @@ TTS(Text-to-Speech) 모델에서 생성된 mel-spectrogram을 음성으로 바�
   - ~~https://j8a703.p.ssafy.io/ai/infer/?text=[TTS할 문장]&voice=1~~(서버종료)
 
 
-# Git
+## Git
 
-## Git Flow~
+### Git Flow~
 
 ```
 💡 우리가 사용하는 Branch
@@ -109,7 +230,7 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 </aside>
 
-### Hotfix 수정사항을 작업중인 branch에 적용시킬때
+#### Hotfix 수정사항을 작업중인 branch에 적용시킬때
 
 ```
 💡 feature에서 기능 개발 중일때 
@@ -128,7 +249,7 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 </aside>
 
-### 기능개발 후에 develop에 merge 시킬때 (local에서 rebase방법)
+#### 기능개발 후에 develop에 merge 시킬때 (local에서 rebase방법)
 
 ```
 💡 feature에서 기능 개발 후 develop에 머지 시킬때
@@ -164,7 +285,7 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 </aside>
 
-### 기능개발 후에 develop에 merge 시킬때 (remote 에서 rebase)
+#### 기능개발 후에 develop에 merge 시킬때 (remote 에서 rebase)
 
 ```
 💡 feature에서 기능 개발 후 develop에 머지 시킬때
@@ -197,14 +318,14 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 ## 
 
-## Branch Convention
+### Branch Convention
 
 ```
 💡 ex) feat/be/login
        feat/fe/login
 ```
 
-## Commit Convention
+### Commit Convention
 
 | 커밋 타입    | 리스트                                     |
 | -------- | --------------------------------------- |
@@ -226,7 +347,7 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 </aside>
 
-## Git Convention
+### Git Convention
 
 ```
 💡 참고사항
@@ -245,24 +366,24 @@ feature : 기능을 개발하는 브랜치 → EPIC과 연동
 
 </aside>
 
-### Merge 정책
+#### Merge 정책
 
 💡 ****[Merge commit with semi-linear history](https://iseunghan.tistory.com/330#2.%20Merge%20commit%20with%20semi-linear%20history-1)****
 
-## ✔️ **Jira 사용법**
+### ✔️ **Jira 사용법**
 
-### 이슈생성
+#### 이슈생성
 
 - 월요일에 주 단위 스프린트 이슈들을 생성
 - 일주일에 40시간 이상 이슈 생성 및 처리
 - 에픽은 기능이 이어진다면 새로 생성하지 않고 스토리를 작성하여 사용
 
-### 구조
+#### 구조
 
 - **에픽 = 기능별 Branch → 자신의 Branch와 연동 필요(연동방법은?, FE은 페이지별로 나눌지, 기능별로 나눌지 개발하면서 최종 결정)**
   - **스토리 :** 각 기능의 세부 작업 단위 → 스토리 완료시 최종 commit 반영
 
-### **명명 규칙**
+#### **명명 규칙**
 
 - 에픽
   - 대분류: 기획, 개발, 배포, 발표
