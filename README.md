@@ -104,25 +104,25 @@
 
 ## 팀원 역할
 
-![TEAM](/docs/image/team.png)
+![TEAM](/documents/assets/team.png)
 
 ## 프로젝트 구조
 
 ### 기능 명세서
 
-![Func](/docs/image/Func.png)
+![Func](/documents/assetse/func.png)
 
 ### API 명세서
 
-![API](/docs/image/API.png)
+![API](/documents/assets/api.png)
 
 ### ERD
 
-![ERD](/docs/image/erd.png)
+![ERD](/documents/assets/erd.png)
 
 ### Architecture
 
-![Architecture](/docs/image/architecture.jpg)
+![Architecture](/documents/assets/architecture.png)
 
 
 ## TTS 모델 선택
