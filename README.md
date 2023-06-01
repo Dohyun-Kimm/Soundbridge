@@ -1,8 +1,9 @@
 # SoundBridge
 
-- 청각 장애인을 위한 소통 및 발음 교정 서비스
+- **음성 AI** 청각 장애인을 위한 소통 및 발음 교정 서비스
 - 기간 2023.02.27 ~ 2023.04.07 (7주)
 - 삼성청년SW아카데미 SSAFY 8기 2학기 특화 프로젝트
+<br/>
 
 ## 목차
 
@@ -12,6 +13,7 @@
 4. [기술 스택](#기술-스택)
 5. [팀원 역할](#팀원-역할)
 6. [프로젝트 구조](#프로젝트-구조)
+<br/>
 
 ## 기획 배경
 
@@ -24,14 +26,36 @@
 3) 말하고 듣는 것이 불편하기 때문에 사회에서 고립되는 경우가 많음
 
 4) 비장애인들은 청각장애인들에 대한 편견이 존재하여 다가가기 어렵다고 생각하거나 수화를 모르면 대화를 할 수 없다는 편견이 있음
+<br/>
 
 ## SoundBridge 소개
 
-청인과 농인 사이의 소통을 편리하게 하는 보조 수단이 필요 → 소통 STT와 TTS
+**STT와 TTS 소통 (일상에서 즉각적인 대화, 업무나 공공기관, 은행 등 공적인 공간에서 대화 보조)**
 
-보조 수단 없이 소통하고자 할 때 말을 할 수 있도록 발음 교정 지원이 필요 → 발음 연습
+→ 자주사용하는 카테고리, 문장에 따라 정렬하여 이용
 
-화상 미팅을 통한 발음 피드백
+→ 다양한 목소리 및 목소리 정보 제공하여 사용(봉사자 목소리, 클로바 API)
+
+ →자동완성 기능으로 편리하게 사용
+
+**봉사자의 목소리 기부와 발음 피드백**
+
+→ 원하는 시간대에 피드백 요청 및 수락 가능
+
+→ 청각장애인과 소통하며 인식 개선
+
+( 고립되는 청각장애인의 소통의 장 제공, 청각장애인에 대한 인식 개선 )
+
+
+**발음연습 및 교정(보조 수단을 이용하지 않고도 사회에서 불편함이 없도록 연습)**
+
+→g2pk: 어떻게 발음해야 할지 알게 해줌, 조음법 제공
+
+→ 자음, 단어, 문장 순으로 연습 가능
+
+→성공률 제공, 보조자료 제공
+
+<br/>
 
 ## 주요 기능
 
@@ -70,12 +94,13 @@
 - **마이페이지**
   - 발음 피드백 기록 조회
   - 녹음 진행사항 조회
+<br/>
 
 ##  스택
 
 ### Backend
 
-- <img src="https://img.shields.io/badge/Spring Boot 2.7.9-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flat-square&logo=&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flat-square&logo=&logoColor=white"/>
 - <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=SpringSecurity&logoColor=white"/> <img src="https://img.shields.io/badge/OAuth-000000?style=flat-square&logo=&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=&logoColor=white"/>
 - <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
 - <img src="https://img.shields.io/badge/WebSocket-FF6C37?style=flat-square&logo=WebSocket" />
@@ -101,16 +126,18 @@
 - <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=GitLab&logoColor=white"/> <img src="https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=Jira Software&logoColor=white"/>
 - <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=Discord&logoColor=white"/> <img src="https://img.shields.io/badge/Mattermost-0058CC?style=flat-square&logo=Mattermost&logoColor=white"/>
 - <img src="https://img.shields.io/badge/ERDCloud-000000?style=flat-square&logo=ERDCloud&logoColor=white"/>
+<br/>
 
 ## 팀원 역할
 
 ![TEAM](/documents/assets/team.png)
+<br/>
 
 ## 프로젝트 구조
 
 ### 기능 명세서
 
-![Func](/documents/assetse/func.png)
+![Func](/documents/assets/func.png)
 
 ### API 명세서
 
